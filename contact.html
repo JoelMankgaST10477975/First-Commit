@@ -1,6 +1,13 @@
 <html>
-<head><Title>Daycare4dogs | Contact Us Page</Title>
-<link rel="icon" type="images/1.png" href="images/1.png"/>
+<head>
+     <meta name="description" content="Daycare4dogs">
+    <meta name="keywords" conetent="Dogs">
+    <meta name="author" content="Uncle Joel Mankga">
+    <meta name="viewpoint" content="width=device-width, intial-scale=1.0">
+    <meta charset="UTF-8">
+    <Title>Daycare4dogs | Contact Us Page</Title>
+<link rel="icon" type="images/1.png" href="images/1.png">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
@@ -24,6 +31,55 @@
 <footer>
 <h1>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1792.0170761642532!2d27.959370575845245!3d-26.065140240327256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9575dfe1a74a63%3A0xc22a780dbd7b9ac5!2sDay%20Care%204%20Dogs%20ZA!5e0!3m2!1sen!2sza!4v1776070122066!5m2!1sen!2sza" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<form id="signupform" novalidate> 
+    <div class="field">
+<label for="fullname">Full Name<span class="req">*</span> </label>
+<input type="text " id="fullname" name="fullname" autocomplete="name" placeholer="Uncle Joel Mankga">
+<div class="error msg" id="FullNameError"></div>
+     </div>
+
+     <div class="field">
+<label for="email">Email<span class="req">*</span> </label>
+<input type="email " id="email" name="email" autocomplete="email" placeholer="unclejoelmankga@gmail.com">
+<div class="error msg" id="EmailError"></div>
+     </div>
+
+     <div class="field">
+<label for="Cellphone">Contact Number<span class="req">*</span> </label>
+<input type="text " id="Cellphone" name="Cellphone" autocomplete="Cellphone" placeholer="081 234 5678">
+<div class="error msg" id="CellphoneError"></div>
+     </div>
+
+     <div class="field">
+<label for="age">Age<span class="req">*</span> </label>
+<input type="text " id="Age" name="Age" autocomplete="Age" placeholer="18">
+<div class="error msg" id="AgeError"></div>
+     </div>
+
+     <div class="field">
+<label for="Password">Password<span class="req">*</span> </label>
+<input type="Password " id="password" name="password" autocomplete="new password" placeholer="At least 8 charaters long">
+<div class="password-strength"> <div class=" Password-strength-fill" id="strengthFill"></div>
+<div class="hint" id="strenghtlabel">Use 8+ characters with a number and symbol</div>
+<div class="error-msg" id="passwordError"></div>
+
+<div class="field">
+<label for="ConfirmPassword">Confirm Password<span class="req">*</span> </label>
+<input type="password " id="ConfirmPassword" name="email" autocomplete="newpassword" placeholer="Re-enter your password">
+<div class="error msg" id="PasswordError"></div>
+     </div>
+<div class="field">
+<label for="Bio">Short Story<span class="req">*</span> </label>
+<input type="text " id="bio" name="bio" autocomplete="optional,max 100 characters" >
+<div class="error msg" id="bioError"></div>
+<div class="char-count" id="biocount"></div>
+</div>
+
+<button type="submit">Create Account</button>  <button type="Reset">Clear</button>
+</form>
+
+
 </h1>
+
 &copy;ST10477975
 </footer>
