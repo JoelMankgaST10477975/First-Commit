@@ -1,10 +1,77 @@
 <!doctype html>
 <html>
-<head><Title>Daycare4dogs | Home Page</Title> 
-<link rel="icon" type="images/1.png" href="images/1.png"/>
+<head>
+   <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  const details = document.querySelectorAll("details");
+  details.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      details.forEach((other) => {
+        if (other !== item) other.removeAttribute("open");
+      });
+    });
+  });
+});
+
+
+function validateForm(event, formType) {
+  event.preventDefault();
+  let name = document.getElementById(formType + "Name").value.trim();
+  let email = document.getElementById(formType + "Email").value.trim();
+  let message = document.getElementById(formType + "Message").value.trim();
+
+  if (name.length < 2) {
+    alert("Please enter a valid name.");
+    return false;
+  }
+  if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+    alert("Please enter a valid email address.");
+    return false;
+  }
+  if (message.length < 10) {
+    alert("Message must be at least 10 characters.");
+    return false;
+  }
+
+  alert(formType + " form submitted successfully!");
+  return true;
+}
+
+
+function openLightbox(imgSrc) {
+  let lightbox = document.getElementById("lightbox");
+  let lightboxImg = document.getElementById("lightboxImg");
+  lightbox.style.display = "block";
+  lightboxImg.src = imgSrc;
+}
+function closeLightbox() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
+
+const testimonials = [
+  "Daycare4Dogs is amazing! My pup loves it here.",
+  "Friendly staff and safe environment — highly recommend.",
+  "Affordable and caring service, my dog feels at home."
+];
+function loadTestimonials() {
+  let container = document.getElementById("testimonialContainer");
+  testimonials.forEach((text) => {
+    let p = document.createElement("p");
+    p.textContent = text;
+    container.appendChild(p);
+  });
+}
+</script>
+
+<Title>Daycare4dogs | Home Page</Title> <link rel="stylesheet" type="css/text" href="style.css">
+<link rel="icon" type="images/1.png" href="images/1.png">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header>
+
 <img src="images/1.png" style= "width:100px; height:100px">
 <nav> 
 <a href="home.html"> Home|</a>
@@ -14,7 +81,14 @@
 <a href="contact.html"> Contact Us|</a>
 </nav>
 </header>
+
 <main>
+    <section>
+  <h3><u>Testimonials</u></h3>
+  <div id="testimonialContainer"></div>
+</section>
+<script>loadTestimonials();</script>
+
 
 <h1 allign="centre"><u>BIT_GR1_Dog daycare Centre</u></h1>
 <h1>Welcome to DayCare4Dogs.co.za</h1>
@@ -37,4 +111,3 @@
 </footer>
 </body>
 </html>
-
